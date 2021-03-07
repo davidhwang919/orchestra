@@ -1,14 +1,101 @@
 {% block content %}
+{% load static %}
 
-{% for project in projects %}
 
-    <h2>{{ project.title }}</h2>
-    <p>{{ project.description }}</p>
-    <img src="{{ project.image.url }}">
 
-    {% if project.url %}
-    <br><a href="{{ project.url }}">Link</a>
-    {% endif %}
-    {% endfor %}
 
-{% endblock %}
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>DSO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/cool.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}" class="logo">DSO</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
+                <li><a href="{% url 'updates' %}">Recent Updates</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#" onclick="toggleMenu();">GoFundMe</a></li>
+                <li><a href="#" onclick="toggleMenu();">Contact Us!</a></li>
+            </ul>
+        </header>
+        <section class="banner" id="home">
+            <div class="textBx">
+                <h2>Updates Page!</h2>
+                <h3> Scroll down to see latest updates</h3>
+                <a href="#" class="btn"> Click here to find out how you can help</a>
+            </div>
+            <div class="contented">
+            <h2>YouTune</h2>
+            <h2>YouTune</h2>
+            </div>
+
+            <div class="contenter">
+                <h2></h2>
+                <h2></h2>
+                </div>
+        </section>
+
+        <p></p>
+        
+       
+
+
+      
+        <br><a href="{{ project.url }}">Link</a>
+ 
+        <section class="about" id="about">
+            {% for project in projects %}
+            
+            <div class="heading">
+                <br>
+                <br>
+                <h2> {{ project.title }}</h2>
+            </div>
+            <div class="content">
+                <div class="contentBx w50">
+                    <p>  {{ project.description }} </p>
+                </div>
+                <div>
+                    <img src="{{ project.image.url }}">
+                </div>
+            </div>
+            {% if project.url %}
+            {% endif %}
+            {% endfor %}
+        </section>
+
+
+ 
+
+
+
+
+        <div class="copyright">
+            <p> Hello! Thanks for visiting this website!</p>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+
+        {% endblock %}
+    </body>
+</html>
