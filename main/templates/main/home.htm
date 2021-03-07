@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+{% block content %}
+
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>DSO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}" class="logo">DSO</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
+                <li><a href="{% url 'updates' %}">Recent Updates</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">YouTube</a></li>
+                <li><a href="#" onclick="toggleMenu();">GoFundMe</a></li>
+                <li><a href="#" onclick="toggleMenu();">Contact Us!</a></li>
+            </ul>
+        </header>
+        <section class="banner" id="home">
+            <div class="textBx">
+                <h2>Digital Symphonic Orchestra!</h2>
+                <h3> Website designed to unite musicians all over the world! </h3>
+                <a href="#" class="btn"> Click here to find out how you can help</a>
+            </div>
+            <div class="contented">
+            <h2>YouTune</h2>
+            <h2>YouTune</h2>
+            </div>
+
+            <div class="contenter">
+                <h2></h2>
+                <h2></h2>
+                </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="heading">
+                <h2> Who and What are We?</h2>
+            </div>
+            <div class="content">
+                <div class="contentBx w50">
+                    <h3> We are a group of musicians gathered from all over the world INCLUDING YOU! </h3>
+                    <p>  We need more members! What we have is never enough! </p>
+                    <p>Music has been a fundamental part of our lives. Especially in consideration of this Covid-19 pandemic, many have struggled throughout the pandemic and playing music is a way of healing ourselves of that damage. Anyone is eligible! Just join!</p>
+                </div>
+                <div class="w50">
+                    <img class="img-me" src="{% static 'main/music.png' %}">
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="heading white">
+                <h2>How this works!</h2>
+                <p>Digital Symphonic Orchestra</p>
+            </div>
+            <div class="content">
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/web.png' %}">
+                    <h2> Stay up to date with Updates!</h2>
+                    <p>Make sure you go to the Updates page and look what piece we are doing!</p>
+                </div>
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/gmail.png' %}">
+                    <br><br>
+                    <h2>Contact Us through Gmail! </h2>
+                    <br>
+                    <p>Our gmail is youtune@gmail.com</p>>
+                </div>
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/recording.png' %}">
+                    <h2> Use two devices and an earbud!</h2>
+                    <p>Remember, this is a digital video recording! Make sure you follow the recording provided in the updates page and contact us for more info! </p>
+                </div>
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/update.png' %}">
+                    <h2> Make sure to share you name to be credited at the end!</h2>
+                    <p>We would love if EVERY SINGLE ONE of you musicians would participate! No audition required!</p>
+                </div>
+                
+            </div>
+        </section>
+
+
+       
+
+
+        
+
+
+        <section class="work">
+            <div class="heading">
+                <h2> Pictures</h2>
+                <p><a href="#">Cool Slideshow</a></p>
+            </div>
+            <div class="content">
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/land.png' %}"  width="340" height="250" >
+                    <h2> La La Land</h2>
+                    <p>Project</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/orchestra.png' %}" width="400" height="250" >
+                    <h2> Star Spangled Banner</h2>
+                    <p>Project</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/simple.png' %}" width="340" height="250" >
+                    <h2> Simple Gifts</h2>
+                    <p>Project</p>
+            </div>
+        </section>
+
+        <section class="testimonialr">
+            <div class="headingr">
+                <h2> Check Out These Links!</h2>
+                <p>Blog Page</p>
+            </div>
+            <div class="content">
+                <div class="testimonialBr">
+                    <a class="aa" href="https://www.gofundme.com/f/no-person-gone-hungry?utm_campaign=p_cp+share-sheet&utm_medium=copy_link_all&utm_source=customer">Go Fund Me Link</a>
+                    <br><br><br><br><br>
+                    <a class="aa" href="#">3D Gallery</a>
+                    <h3>Hello <br><span>Click one of these links</span></h3>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="contact" id="contact">
+            <div class="heading white">
+                <h2>Contact Us</h2>
+                <p>Contact information</p>
+            </div>
+            <div class="content">
+                <div class="contactInfo">
+                    <h3>Contact Info</h3>
+                    <div class="contactInfoBx">
+                        <div class="box">
+                            <div class="icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Address</h3>
+                                <p>Area</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Phone Number</h3>
+                                <p>331-228-8300</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="icon">
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="formBx">
+                    <form>
+                        <h3>Message Us</h3>
+                        <input type="text" name="" placeholder="Full Name">
+                        <input type="email" name="" placeholder="Email">
+                        <textarea placeholder="Your Message"></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                </div>
+        </section>
+
+        <div class="copyright">
+            <p> Hello! Thanks for visiting this website!</p>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
+
+
+
+{% endblock %}
