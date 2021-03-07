@@ -8,3 +8,6 @@ def updates(request):
     projects = Project.objects.all()
     return render(request, 'main/updates.htm', {'projects':projects})
 # Create your views here.
+
+def about(request):
+    return render(request, 'main/about.htm')
