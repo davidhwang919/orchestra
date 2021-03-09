@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('updates', views.updates, name='updates'),
     path('about', views.about, name='about'),
+    path('dannyboy', views.danny, name='danny')
 ]
 
 
