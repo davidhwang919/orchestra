@@ -22,7 +22,6 @@
                 <li><a href="{% url 'updates' %}">Recent Updates</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
-                <li><a href="https://www.gofundme.com/f/help-pay-for-orchestra-piece-played-for-community">GoFundUs</a></li>
                 <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
             </ul>
         </header>
@@ -43,19 +42,185 @@
                 </div>
         </section>
 
-        <section class="about" id="about">
-            <div class="heading">
-                <h2> Who and What are We?</h2>
+        
+        <section class="services" id="services">
+            <div class="heading white">
+                <h2>Humans</h2>
+                <p>Starters</p>
             </div>
             <div class="content">
-                <div class="contentBx w50">
-                    <h3> We are a group of musicians gathered from all over the world INCLUDING YOU! </h3>
-                    <p>  We need more members! What we have is never enough! </p>
-                    <p>Music has been a fundamental part of our lives. Especially in consideration of this Covid-19 pandemic, many have struggled throughout the pandemic and playing music is a way of healing ourselves of that damage. Anyone is eligible! Just join!</p>
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}">
+                    <h2> David Hwang</h2>
+                    <p>Founder/Editor of Youth Digital Symphonic Orchestra.</p>
                 </div>
-                <div class="w50">
-                    <img class="img-me" src="{% static 'main/music.png' %}">
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}">
+                    <h2> Teresa Lopez</h2>
+                    <p>Founder of Youth Digital Symphonic Orchestra.</p>
                 </div>
+                <div class="servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}">
+                    <h2> Sai Vattyam</h2>
+                    <p>Founder of Youth Digital Symphonic Orchestra. </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="work">
+            <div class="heading">
+                <h2> Helpers</h2>
+                <p>All participants</p>
+            </div>
+            <div class="content">
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Parnitha Bandla</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="140" height="250" >
+                    <h2> Carol Bao </h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Brooke Zhang</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Pranav Bhuvan</h2>
+                    <p>Participant</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Jerry Zhou</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Yusuf Elessawy</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Mia Lusim</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="workBx; servicesBx">
+                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                    <h2> Laney Kang</h2>
+                    <p>Participant</p>
+                </div>
+                <div class="content">
+                    <div class="workBx; servicesBx">
+                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                        <h2> Daniel Kim</h2>
+                        <p>Participant</p>
+                    </div>
+                    <div class="workBx; servicesBx">
+                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                        <h2> Kendall Klimek</h2>
+                        <p>Participant</p>
+                    </div>
+                    <div class="workBx; servicesBx">
+                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                        <h2> Sienna Luprano</h2>
+                        <p>Participant</p>
+                    </div>
+                    <div class="workBx; servicesBx">
+                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                        <h2> Dhaatri M</h2>
+                        <p>Participant</p>
+                    </div>
+                    <div class="content">
+                        <div class="workBx; servicesBx">
+                            <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                            <h2> Matthew Lee</h2>
+                            <p>Participant</p>
+                        </div>
+                        <div class="workBx; servicesBx">
+                            <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                            <h2> Alessandra Minin</h2>
+                            <p>Participant</p>
+                        </div>
+                        <div class="workBx; servicesBx">
+                            <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                            <h2> Monish Murali</h2>
+                            <p>Participant</p>
+                        </div>
+                        <div class="workBx; servicesBx">
+                            <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                            <h2> Yash Nadgar</h2>
+                            <p>Participant</p>
+                        </div>
+                        <div class="content">
+                            <div class="workBx; servicesBx">
+                                <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                <h2> Jayram Palamadai</h2>
+                                <p>Participant</p>
+                            </div>
+                            <div class="workBx; servicesBx">
+                                <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                <h2> Adit Raha</h2>
+                                <p>Participant</p>
+                            </div>
+                            <div class="workBx; servicesBx">
+                                <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                <h2> Anish Basety</h2>
+                                <p>Participant</p>
+                            </div>
+                            <div class="workBx; servicesBx">
+                                <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                <h2> Isha Srinivasan</h2>
+                                <p>Participant</p>
+                            </div>
+                            <div class="content">
+                                <div class="workBx; servicesBx">
+                                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                    <h2> Anika Srinivasan</h2>
+                                    <p>Participant</p>
+                                </div>
+                                <div class="workBx; servicesBx">
+                                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                    <h2> Avaneesh Thiyagarajan</h2>
+                                    <p>Participant</p>
+                                </div>
+                                <div class="workBx; servicesBx">
+                                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                    <h2> Steven He</h2>
+                                    <p>Participant</p>
+                                </div>
+                                <div class="workBx; servicesBx">
+                                    <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                    <h2> Julianna Webster</h2>
+                                    <p>Participant</p>
+                            </div>
+                            <div class="content">
+                                    <div class="workBx; servicesBx">
+                                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                        <h2> Eva Zlochower</h2>
+                                        <p>Participant</p>
+                                    </div>
+                                    <div class="workBx; servicesBx">
+                                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                        <h2> April Zhang</h2>
+                                        <p>Participant</p>
+                                    </div>
+                                    <div class="workBx; servicesBx">
+                                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                        <h2> Blank</h2>
+                                        <p>Participant</p>
+                                    </div>
+                                    <div class="workBx; servicesBx">
+                                        <img class="img-me" src="{% static 'main/violin.png' %}" width="200" height="250" >
+                                        <h2> Blank</h2>
+                                        <p>Participant</p>
+                            </div>
             </div>
         </section>
    
