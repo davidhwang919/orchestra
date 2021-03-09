@@ -11,3 +11,6 @@ def updates(request):
 
 def about(request):
     return render(request, 'main/about.htm')
+
+def danny(request):
+    return render(request, 'main/danny.htm')

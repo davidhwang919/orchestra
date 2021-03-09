@@ -22,15 +22,15 @@
                 <li><a href="{% url 'updates' %}">Recent Updates</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
-                <li><a href="https://www.gofundme.com/f/help-pay-for-orchestra-piece-played-for-community">GoFundUs</a></li>
                 <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
+                <li><a href="{% url 'danny' %}">Danny Boy Info</a></li>
             </ul>
         </header>
         <section class="banner" id="home">
             <div class="textBx">
                 <h2>Digital Symphonic Orchestra!</h2>
                 <h3> Website designed to unite musicians all over the world! </h3>
-                <a href="#" class="btn"> Click here to find out how you can help</a>
+                <a href="{% url 'updates' %}" class="btn"> Click here find our RECENT Updates!</a>
             </div>
             <div class="contented">
             <h2>YouTune</h2>
@@ -82,9 +82,9 @@
                     <p>Remember, this is a digital video recording! Make sure you follow the recording provided in the updates page and contact us for more info! </p>
                 </div>
                 <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/update.png' %}">
-                    <h2> Make sure to share you name to be credited at the end!</h2>
-                    <p>We would love if EVERY SINGLE ONE of you musicians would participate! No audition required!</p>
+                    <img class="img-me" src="{% static 'main/drive.png' %}">
+                    <h2> Make sure to UPLOAD it to Google Drive and share it!</h2>
+                    <p>In the contact section below, share it to davidhwang919@gmail.com as he will do the editing. Make sure your share access is set to anyone! Really important!</p>
                 </div>
                 
             </div>
@@ -99,24 +99,25 @@
 
         <section class="work">
             <div class="heading">
-                <h2> Pictures</h2>
-                <p><a href="#">Cool Slideshow</a></p>
+                <h2> Our Progress so far! So proud of all of these members! Thank you!</h2>
+                <p><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">subscribe by clicking here!</a></p>
             </div>
             <div class="content">
                 <div class="workBx; servicesBx">
                     <img class="img-me" src="{% static 'main/lala.PNG' %}"  width="280" height="220" >
                     <h2> La La Land</h2>
-                    <p>Project</p>
+                    <p>Scullen, Neuqua High, Crone,</p>
+                    <p>Gregory, Westglades in Florida, etc.</p>
                 </div>
                 <div class="workBx; servicesBx">
                     <img class="img-me" src="{% static 'main/salute.PNG' %}" width="280" height="220" >
                     <h2> Star Spangled Banner</h2>
-                    <p>Project</p>
+                    <p>A lot of people</p>
                 </div>
                 <div class="workBx; servicesBx">
                     <img class="img-me" src="{% static 'main/gift.PNG' %}" width="280" height="220" >
                     <h2> Simple Gifts</h2>
-                    <p>Project</p>
+                    <p>Mr. Greg Schwaegler students and Florida kids!</p>
             </div>
         </section>
 
