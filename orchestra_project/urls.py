@@ -28,6 +28,7 @@ urlpatterns = [
     path('dannyboy', views.danny, name='danny'),
     path('test', views.test, name='test'),
     path('band', views.band, name='band'),
+    path('raid', views.raid, name='raid'),
 ]
 
 

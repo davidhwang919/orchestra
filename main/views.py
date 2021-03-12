@@ -22,3 +22,6 @@ def test(request):
 
 def band(request):
     return render(request, 'main/band.htm')
+
+def raid(request):
+    return render(request, 'main/raid.htm')
