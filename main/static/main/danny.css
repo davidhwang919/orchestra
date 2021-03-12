@@ -197,7 +197,7 @@ img {
 }
 
 .testimonial {
-    background: #f7f7f7;
+    background: #000000;
 }
 
 
@@ -211,7 +211,7 @@ img {
     max-width: calc(50% - 40px);
     padding:60px 40px;
     margin: 20px;
-    background: #2196f3;
+    background: #f3b121;
 }
 
 .testimonial .content .testimonialBx p {
@@ -436,6 +436,22 @@ img {
     padding: 1em 1.5em;
     text-decoration: none;
     text-transform: uppercase;
+}
+.aaa {
+    background-color: rgb(0, 119, 255);
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.aaa:hover {
+    opacity: 1;
+    background: #0a4d9a;
+    background: -moz-linear-gradient(-45deg, #3db82d 15%, #002087 100%);
+    background: -webkit-linear-gradient(-45deg, #3db82d 15%,#002087 100%);
+    background: linear-gradient(135deg, #3db82d 15%,#002087 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
 }
 
 

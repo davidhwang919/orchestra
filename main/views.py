@@ -14,3 +14,11 @@ def about(request):
 
 def danny(request):
     return render(request, 'main/danny.htm')
+
+
+def test(request):
+    return render(request, 'main/test.htm')
+
+
+def band(request):
+    return render(request, 'main/band.htm')
