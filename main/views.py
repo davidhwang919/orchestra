@@ -25,3 +25,7 @@ def band(request):
 
 def raid(request):
     return render(request, 'main/raid.htm')
+
+
+def throne(request):
+    return render(request, 'main/throne.htm')
