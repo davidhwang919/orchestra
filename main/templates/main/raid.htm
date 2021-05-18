@@ -1,215 +1,109 @@
+<!DOCTYPE html>
+
+
 {% block content %}
+
 {% load static %}
-
-
-
 
 
 <html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>DSO</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'main/raid.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>thing</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'main/styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/scripts.js' %}">
+        <link rel="icon" type="image/x-icon" href="{% static 'main/favicon.png" />
+        <!-- Core theme CSS (includes Bootstrap)-->
     </head>
-    <body>
-        <header>
-            <a href="{% url 'home' %}" class="logo">DSO</a>
-            <div class="toggle" onclick="toggleMenu();"></div>
-            <ul class="menu">
-                <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
-                <li><a href="{% url 'updates' %}">Recent Updates</a></li>
-                <li><a href="{% url 'test' %}">About Us</a></li>
-                <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
-                <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
-            </ul>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">La La Land Band</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'home' %}">Home Page</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sheet Music</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Audio Recording</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Submit or share here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="bg-primary text-white">
+            <div class="container text-center">
+                <h1>Welcome!</h1>
+                <p class="lead">You can find the AUDIO and SHEET MUSIC! Below!</p>
+            </div>
         </header>
-        <section class="banner" id="home">
-            <div class="textBx">
-                <h2>Raiders of the Lost Arc Info Page!</h2>
-                <h3> Scroll down to see latest updates</h3>
-                <a href="{% url 'home' %}" class="btn"> Click here go back home</a>
-            </div>
-            <div class="contented">
-            <h2>YouTune</h2>
-            <h2>YouTune</h2>
-            </div>
-
-            <div class="contenter">
-                <h2></h2>
-                <h2></h2>
-                </div>
-        </section>
-
-     
-        <section class="services" id="services">
-            <div class="heading white">
-                <h2>How this works!</h2>
-                <p>Digital Symphonic Orchestra</p>
-            </div>
-            <div class="content">
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/drive.png' %}">
-                    <h2> Step 1: Click the Audio/Sheet</h2>
-                    <p>Scroll down to find Audio/Sheet where you would get the audio file to listen to and the sheet music to read</p>
-                    <br>
-                    <br>
-                    <a class="aaa" href="https://drive.google.com/drive/folders/1iOmM8VI_CMp4DR9FtIcodLohn_vnJSqs?usp=sharing">Audio/Sheet</a>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/web.png' %}">
-                    <br><br>
-                    <h2>Step 2: Submit it </h2>
-                    <br>
-                    <p>Go to Submit below where you can share the google drive link to us!</p>
-                    <br>
-                    <br>
-                    <a class="aaa" href="https://docs.google.com/forms/d/e/1FAIpQLSdAf6UAULhqKoVR5vfAG8HMI5PbbNUa-Rufqpgeaj_Sm1zvVw/viewform?usp=sf_link">Submit</a>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/recording.png' %}">
-                    <h2> Step 3: Use two devices and an earbud!</h2>
-                    <p>Remember, this is a digital video recording! Make sure you follow the recording provided in the updates page and contact us for more info! </p>
-                    <br>
-                    <br>
-                    <a class="aaa" href="https://www.youtube.com/watch?v=NblXJ8N7vuI">Instructions video</a>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/gmail.png' %}">
-                    <h2> Contact us</h2>
-                    <p>In the contact section below, share it to davidhwang919@gmail.com as he will do the editing. If you would prefer to share it through Gmail! It works as well!</p>
-                </div>
-                
-            </div>
-        </section>
-        
-       
-        <section class="testimonial">
-            <div class="headingr">
-                <h2> Check Out These Links!</h2>
-                <p>Blog Page</p>
-            </div>
-            <div class="content">
-                <div class="testimonialBx">
-                    <a class="aaa" href="https://drive.google.com/drive/folders/1iOmM8VI_CMp4DR9FtIcodLohn_vnJSqs?usp=sharing">Audio/Sheet</a>
-                    <h3>Audio <br><span>Sheet Music</span></h3>
-                </div>
-                <div class="testimonialBx">
-                    <a class="aaa" href="https://docs.google.com/forms/d/e/1FAIpQLSdAf6UAULhqKoVR5vfAG8HMI5PbbNUa-Rufqpgeaj_Sm1zvVw/viewform?usp=sf_link">Submit video here!!</a>
-                    <h3>Google <br><span>Form</span></h3>
-                </div>
-                <div class="testimonialBx">
-                    <a class="aaa" href="https://drive.google.com/drive/folders/1zHyWajf0DXcv-pk23o4LA10exTSewZTQ?usp=sharing">Video progress!!</a>
-                    <h3>Video <br><span>Progress</span></h3>
-                </div>
-            </div>
-        </section>
-
-
-
- 
-        <section class="about" id="about">
-            
-            <div class="heading">
-                <br>
-                <br>
-                <h2> Raiders Arc details.</h2>
-            </div>
-            <div class="content">
-                <div class="contentBx w50">
-                    <p> Thank you everyone for participating in this project. We really mean it. Remember for Danny Boy, you must need to listen and record simultaneously and use earbuds. Go to google form for all the tools needed to record and the google drive below for the recording and the sheet music. Also, make SURE it is in a VIDEO format. Cellos should play the second line, violins 1st or 2nd, and violas 3rd. But if you really want, you can choose any! Thank you everyone. </p>
-                    <br>
-                    <p>This is DUE soon as possible! Earlier would be better! Thanks!</p>
-                    <br>
-                    <a href="https://drive.google.com/drive/folders/1iOmM8VI_CMp4DR9FtIcodLohn_vnJSqs?usp=sharing">Click here for the sheet music and recording. Google Drive</a>
-                    <br>
-                    <br>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeGgj7tBJiYCYwSoc2UvO-EXkErSyUjPRn8qWNXzCbufMI9A/viewform?usp=sf_link">Click here to submit your video! Google Form!</a>
-                </div>
-                <div>
-                    <img class="img-me" src="{% static 'main/danny.png' %}">
-                </div>
-            </div>
-            
-        </section>
-
-
-
-
-
-
-        <section class="contact" id="contact">
-            <div class="heading white">
-                <h2>Contact Us</h2>
-                <p>Contact information</p>
-            </div>
-            <div class="content">
-                <div class="contactInfo">
-                    <h3>Contact Info</h3>
-                    <div class="contactInfoBx">
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Address</h3>
-                                <p>Area</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Phone Number</h3>
-                                <p>331-228-8300</p>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-envelope-o"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Email</h3>
-                                <p>youtune8000@gmail.com</p>
-                                <br>
-                                <p>davidhwang919@gmail.com</p>
-                            </div>
-                        </div>
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Why are we doing this?</h2>
+                        <p class="lead">Why are we doing this you say? Well well well.. who doesn't like la la land?! As the year was rough and times were especially hard in this pandemic the team thought it would be nice to finish off strong with a piece that everyone enjoys. last year's la la land from robert longfield was a big success and let's bring that back this year!! Let's say the due date is by June 8th but if you really need more time we can extend it. Thank you! </p> 
+                        <br>
+                        <p>Also! Violins can play flute and cellos can play bassoon parts or any other parts you can read. thanks!</p>
+                        <ul>
+                            <a href="https://drive.google.com/file/d/1AAp2DDPsq0q08eRzKuU0GcxNG-yiSr_n/view?usp=sharing">La La Land music</a>
+                        </ul>
                     </div>
                 </div>
-                <div class="formBx">
-                    <form>
-                        <h3>Message Us</h3>
-                        <input type="text" name="" placeholder="Full Name">
-                        <input type="email" name="" placeholder="Email">
-                        <textarea placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
-                </div>
+            </div>
         </section>
-
-
-        <div class="copyright">
-            <p> Hello! Thanks for visiting this website!</p>
-        </div>
-        <script type="text/javascript">
-            window.addEventListener('scroll', function(){
-                var header = document.querySelector('header');
-                header.classList.toggle('sticky', window.scrollY > 0);
-            });
-
-            function toggleMenu(){
-                var menuToggle = document.querySelector('.toggle');
-                var menu = document.querySelector('.menu');
-                menuToggle.classList.toggle('active');
-                menu.classList.toggle('active');
-            }
-        </script>
-
-        {% endblock %}
+       
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Click this below to find your part!</h2>
+                        <p class="lead">Your part should be in the Google Drive folder below. Just find it. </p>
+                        <ul>
+                            <a href="https://drive.google.com/file/d/1AAp2DDPsq0q08eRzKuU0GcxNG-yiSr_n/view?usp=sharing">La La Land music</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light" id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Audio recording</h2>
+                        <p class="lead">Remember, use EARBUDS to listen and a separate VIDEO Recording device to record. Record in video format</p>
+                        <ul>
+                            <a href="https://www.youtube.com/watch?v=Af1iVHYT9Z0">YouTube audio recording link!</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>Contact us</h2>
+                        <p class="lead">send us your recording to my gmail davidhwang919@gmail.com through your google DRIVE link! File is too big to just directly share it! Thanks!!! I'm really excited!! :)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">contact davidhwang919@gmail.com. Also, I would prefer to submit as soon as possible. Latest is May 10th! But it is really easy!</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'main/scripts.js' %}"></script>
     </body>
 </html>
+
+{% endblock %}
