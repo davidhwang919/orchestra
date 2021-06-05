@@ -30,6 +30,7 @@ urlpatterns = [
     path('band', views.band, name='band'),
     path('raid', views.raid, name='raid'),
     path('throne', views.throne, name='throne'),
+    path('eine', views.eine, name='eine'),
 ]
 
 

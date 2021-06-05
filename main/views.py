@@ -29,3 +29,7 @@ def raid(request):
 
 def throne(request):
     return render(request, 'main/throne.htm')
+
+    
+def eine(request):
+    return render(request, 'main/eine.htm')
