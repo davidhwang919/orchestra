@@ -1,0 +1,81 @@
+{% block content %}
+{% load static %}
+
+
+
+
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>DSO</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/cool.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}" class="logo">WDSO</a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
+                <li><a href="{% url 'test' %}">About Us</a></li>
+                <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
+            </ul>
+        </header>
+        <section class="banner" id="home">
+            <div class="textBx">
+                <h2>Current Projects</h2>
+                <h3> Scroll down to see latest projects still running</h3>
+                <a href="{% url 'home' %}" class="btn"> Click here go back home</a>
+            </div>
+        </section>
+
+        <p></p>
+        
+       
+        <section class="about" id="about">
+            <div class="heading">
+                <h2> Projects</h2>
+            </div>
+            <div class="content">
+                <div class="contentBx w50">
+                    <h3> We are a group of musicians gathered from all over the world INCLUDING YOU! </h3>
+                    <p>The project seen in the picture to the right/below is our most current project band members are working on internationally. We so far as seen have a couple people but of from various countries inclduing Nigeria, Portugal, Canada, Illinois, Florida, etc. However, we are still short of many players such as french hornists, bassoonists, flutists, trumpet players, and many more. The link below leads to the project files, audio recording, and further directions! </p>
+                </br>
+                </br>
+                    <a href="{% url 'raid' %}">Link to the La La Land Website</a>
+                </div>
+                <div class="w50">
+                    <img class="img-me" src="{% static 'main/lascreen.PNG' %}">
+                </div>
+            </div>
+        </section>
+
+ 
+
+
+
+
+        <div class="copyright">
+            <p> Hello! Thanks for visiting this website!</p>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active');
+                menu.classList.toggle('active');
+            }
+        </script>
+
+        {% endblock %}
+    </body>
+</html>

@@ -31,6 +31,7 @@ urlpatterns = [
     path('raid', views.raid, name='raid'),
     path('throne', views.throne, name='throne'),
     path('eine', views.eine, name='eine'),
+    path('recent', views.recent, name='recent'),
 ]
 
 

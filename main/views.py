@@ -33,3 +33,6 @@ def throne(request):
     
 def eine(request):
     return render(request, 'main/eine.htm')
+
+def recent(request):
+    return render(request, 'main/recent.htm')

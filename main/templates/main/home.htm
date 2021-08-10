@@ -8,35 +8,33 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <title>DSO</title>
+        <title>WDSO</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
     </head>
     <body>
         <header>
-            <a href="{% url 'home' %}" class="logo">DSO</a>
+            <a href="{% url 'home' %}" class="logo">WDSO</a>
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
                 <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
-                <li><a href="{% url 'updates' %}">Recent Updates</a></li>
                 <li><a href="{% url 'test' %}">About Us</a></li>
                 <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
                 <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
-                <li><a href="{% url 'throne' %}">Game of Thrones</a></li>
-                <li><a href="{% url 'raid' %}">La La Land Band</a></li>
-                <li><a href="{% url 'eine' %}">Eine Kleine</a></li>
+                <li><a href="{% url 'recent' %}">CURRENT PROJECTS</a></li>
+
             </ul>
         </header>
         <section class="banner" id="home">
             <div class="textBx">
-                <h2>Digital Symphonic Orchestra!</h2>
-                <h3> Website designed to unite musicians all over the world! You too! </h3>
-                <a href="{% url 'updates' %}" class="btn"> Click here find our RECENT Updates!</a>
+                <h2>Worldwide Digital Symphonic Orchestra</h2>
+                <h3> Together, we can make a big virtual performance! </h3>
+                <a href="{% url 'recent' %}" class="btn"> Click here to find our CURRENT projects!</a>
             </div>
             <div class="contented">
-            <h2>YouTune</h2>
-            <h2>YouTune</h2>
+            <h2>WDSO</h2>
+            <h2>WDSO</h2>
             </div>
 
             <div class="contenter">
@@ -52,8 +50,7 @@
             <div class="content">
                 <div class="contentBx w50">
                     <h3> We are a group of musicians gathered from all over the world INCLUDING YOU! </h3>
-                    <p>  We need more members! What we have is never enough! </p>
-                    <p>Music has been a fundamental part of our lives. Especially in consideration of this Covid-19 pandemic, many have struggled throughout the pandemic and playing music is a way of healing ourselves of that damage. Anyone is eligible! Just join!</p>
+                    <p>Hi, if you are new here, Welcome and CONGRADULATIONS! We are so excited to have you part of our Worldwide Digital Symphonic Orchestra. You have been accepted into this elite group without any auditioning required. This is because we value every single musician out there regardless of skill level. Our main purpose is to give a voice to every individual who plays an instrument whether that is vocal or instrumental (strings, wind, or percussion). We really hope you can be part of our wonderful orchestra. Your exciting journey begins here! Alright, first of all, join the Google Classroom code please! Code is hkct5bn </p>
                 </div>
                 <div class="w50">
                     <img class="img-me" src="{% static 'main/music.png' %}">
@@ -63,13 +60,13 @@
         <section class="services" id="services">
             <div class="heading white">
                 <h2>How this works!</h2>
-                <p>Digital Symphonic Orchestra</p>
+                <p>Worldwide Digital Symphonic Orchestra</p>
             </div>
             <div class="content">
                 <div class="servicesBx">
                     <img class="img-me" src="{% static 'main/web.png' %}">
-                    <h2> Stay up to date with Updates!</h2>
-                    <p>Make sure you go to the Updates page and look what piece we are doing!</p>
+                    <h2> Stay up to date by going to the "CURRENT PROJECTS" Section!</h2>
+                    <p>There are separate links to each project on that site! Make sure to submit as soon as possible! :)</p>
                 </div>
                 <div class="servicesBx">
                     <img class="img-me" src="{% static 'main/gmail.png' %}">
@@ -81,47 +78,19 @@
                 <div class="servicesBx">
                     <img class="img-me" src="{% static 'main/recording.png' %}">
                     <h2> Use two devices and an earbud!</h2>
-                    <p>Remember, this is a digital video recording! Make sure you follow the recording provided in the updates page and contact us for more info! </p>
+                    <p>Remember, this is a digital video recording! Make sure you follow the youtube audio link provided and record in a horizontal video format. It can end in .mp4, .mov, etc. </p>
                 </div>
                 <div class="servicesBx">
                     <img class="img-me" src="{% static 'main/drive.png' %}">
                     <h2> Make sure to UPLOAD it to Google Drive and share it!</h2>
-                    <p>In the contact section below, share it to davidhwang919@gmail.com as he will do the editing. Make sure your share access is set to anyone! Really important!</p>
+                    <p>In the contact section below, share it to davidhwang919@gmail.com as he will do the editing. Make sure your share access is set to anyone! Really important! Or another alternative would be to submit it through the Google Form if provided! (this is recommended!)</p>
                 </div>
                 
             </div>
         </section>
 
 
-       
-
-
-        
-
-
-        <section class="work">
-            <div class="heading">
-                <h2> Our Progress so far! So proud of all of these members! Thank you!</h2>
-                <p><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">subscribe by clicking here!</a></p>
-            </div>
-            <div class="content">
-                <div class="workBx; servicesBx">
-                    <img class="img-me" src="{% static 'main/lala.PNG' %}"  width="280" height="220" >
-                    <h2> La La Land</h2>
-                    <p>Scullen, Neuqua High, Crone,</p>
-                    <p>Gregory, Westglades in Florida, etc.</p>
-                </div>
-                <div class="workBx; servicesBx">
-                    <img class="img-me" src="{% static 'main/salute.PNG' %}" width="280" height="220" >
-                    <h2> Star Spangled Banner</h2>
-                    <p>A lot of people</p>
-                </div>
-                <div class="workBx; servicesBx">
-                    <img class="img-me" src="{% static 'main/gift.PNG' %}" width="280" height="220" >
-                    <h2> Simple Gifts</h2>
-                    <p>Mr. Greg Schwaegler students and Florida kids!</p>
-            </div>
-        </section>
+    
 
        
 
