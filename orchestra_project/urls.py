@@ -32,6 +32,7 @@ urlpatterns = [
     path('throne', views.throne, name='throne'),
     path('eine', views.eine, name='eine'),
     path('recent', views.recent, name='recent'),
+    path('past', views.past, name='past'),
 ]
 
 

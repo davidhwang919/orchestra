@@ -4,192 +4,495 @@
 
 {% load static %}
 
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>WDSO</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
-    </head>
-    <body>
-        <header>
-            <a href="{% url 'home' %}" class="logo">WDSO</a>
-            <div class="toggle" onclick="toggleMenu();"></div>
-            <ul class="menu">
-                <li><a href="{% url 'home' %}" onclick="toggleMenu();">Home.</a></li>
-                <li><a href="{% url 'test' %}">About Us</a></li>
-                <li><a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w">YouTube</a></li>
-                <li><a href="#contact" onclick="toggleMenu();">Contact Us!</a></li>
-                <li><a href="{% url 'recent' %}">CURRENT PROJECTS</a></li>
-
-            </ul>
-        </header>
-        <section class="banner" id="home">
-            <div class="textBx">
-                <h2>Worldwide Digital Symphonic Orchestra</h2>
-                <h3> Together, we can make a big virtual performance! </h3>
-                <a href="{% url 'recent' %}" class="btn"> Click here to find our CURRENT projects!</a>
-            </div>
-            <div class="contented">
-            <h2>WDSO</h2>
-            <h2>WDSO</h2>
-            </div>
-
-            <div class="contenter">
-                <h2></h2>
-                <h2></h2>
-                </div>
-        </section>
-
-
-        <section class="testimonialr">
-            <div class="headingr">
-                <h2> Some of our Top YouTube Videos!</h2>
-                <p>From the big dedication from all of our participants we present you...</p>
-            </div>
-            <div class="content">
-                <iframe
-                    src="https://www.youtube.com/embed/dzGFWQKaoyI "
-                    allowfullscreen>
-                </iframe>
-                <iframe
-                    src="https://www.youtube.com/embed/T8hVEXcrLPc"
-                    allowfullscreen>
-                </iframe>
-                <iframe
-                    src="https://www.youtube.com/embed/yoswnu982-k"
-                    allowfullscreen>
-                </iframe>
-                <iframe
-                    src="https://www.youtube.com/embed/OzswNGc7lYs "
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-
-        <section class="about" id="about">
-            <div class="heading">
-                <h2> Who and What are We?</h2>
-            </div>
-            <div class="content">
-                <div class="contentBx w50">
-                    <h3> We are a group of musicians gathered from all over the world INCLUDING YOU! </h3>
-                    <p>Hi, if you are new here, Welcome and CONGRADULATIONS! We are so excited to have you part of our Worldwide Digital Symphonic Orchestra. You have been accepted into this elite group without any auditioning required. This is because we value every single musician out there regardless of skill level. Our main purpose is to give a voice to every individual who plays an instrument whether that is vocal or instrumental (strings, wind, or percussion). We really hope you can be part of our wonderful orchestra. Your exciting journey begins here! Alright, first of all, join the Google Classroom code please! Code is hkct5bn </p>
-                </div>
-                <div class="w50">
-                    <img class="img-me" src="{% static 'main/music.png' %}">
-                </div>
-            </div>
-        </section>
-        <section class="services" id="services">
-            <div class="heading white">
-                <h2>How this works!</h2>
-                <p>Worldwide Digital Symphonic Orchestra</p>
-            </div>
-            <div class="content">
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/web.png' %}">
-                    <h2> Stay up to date by going to the "CURRENT PROJECTS" Section!</h2>
-                    <p>There are separate links to each project on that site! Make sure to submit as soon as possible! :)</p>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/gmail.png' %}">
-                    <br><br>
-                    <h2>Contact Us through Gmail! </h2>
-                    <br>
-                    <p>Our gmail is youtune8000@gmail.com</p>>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/recording.png' %}">
-                    <h2> Use two devices and an earbud!</h2>
-                    <p>Remember, this is a digital video recording! Make sure you follow the youtube audio link provided and record in a horizontal video format. It can end in .mp4, .mov, etc. </p>
-                </div>
-                <div class="servicesBx">
-                    <img class="img-me" src="{% static 'main/drive.png' %}">
-                    <h2> Make sure to UPLOAD it to Google Drive and share it!</h2>
-                    <p>In the contact section below, share it to davidhwang919@gmail.com as he will do the editing. Make sure your share access is set to anyone! Really important! Or another alternative would be to submit it through the Google Form if provided! (this is recommended!)</p>
-                </div>
-                
-            </div>
-        </section>
-
-       
-
-
-
-        <section class="contact" id="contact">
-            <div class="heading white">
-                <h2>Contact Us</h2>
-                <p>Contact information</p>
-            </div>
-            <div class="content">
-                <div class="contactInfo">
-                    <h3>Contact Info</h3>
-                    <div class="contactInfoBx">
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Address</h3>
-                                <p>Area</p>
-                            </div>
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    
+            <!--=============== REMIXICONS ===============-->
+            <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+            
+            <!--=============== SWIPER CSS ===============-->
+            <link rel="stylesheet" type="text/css" href="{% static 'main/more.css' %}">
+    
+            <!--=============== CSS ===============-->
+            <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    
+            <title>Global Symphony</title>
+        </head>
+        <body>
+            <header class="header" id="header">
+                <nav class="nav container">
+                    <a href="#" class="nav__logo">Global Virtual Symphony</a>
+    
+                    <div class="nav__menu" id="nav-menu">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#home" class="nav__link active-link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#about" class="nav__link">About</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#discover" class="nav__link">Past Projects</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#place" class="nav__link">More Project</a>
+                            </li>
+                        </ul>
+    
+                        <div class="nav__dark">
+                            <!-- Theme change button -->
+                            <span class="change-theme-name">Dark mode</span>
+                            <i class="ri-moon-line change-theme" id="theme-button"></i>
                         </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="text">
-                                <h3>Phone Number</h3>
-                                <p>331-228-8300</p>
-                            </div>
+    
+                        <i class="ri-close-line nav__close" id="nav-close"></i>
+                    </div>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-function-line"></i>
+                    </div>
+                </nav>
+            </header>
+    
+            <main class="main">
+                <!--==================== HOME ====================-->
+                <section class="home" id="home">
+                    <img src="{% static 'main/violin.jpg' %}" alt="" class="home__img">
+                    <div class="home__container container grid">
+                        <div class="home__data">
+                            <span class="home__data-subtitle">Be a part of the team</span>
+                            <h1 class="home__data-title">We <br>  need<b> musicians <br> like YOU</b></h1>
+                            <a href="#" class="button">Join Us Now</a>
+    
                         </div>
-                        <div class="box">
-                            <div class="icon">
-                                <i class="fa fa-envelope-o"></i>
+    
+                        <div class="home__social">
+                            <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </div>
+    
+                        <div class="home__info">
+                            <div>
+                                <span class="home__info-title">Click here for the current project</span>
+                                <a href="https://digitalorchestra.pythonanywhere.com/raid" class="button button--flex button--link home__info-button">
+                                    More <i class="ri-arrow-right-line"></i>
+                                </a>
                             </div>
-                            <div class="text">
-                                <h3>Email</h3>
-                                <p>youtune8000@gmail.com</p>
-                                <br>
-                                <p>davidhwang919@gmail.com</p>
+    
+                            <div class="home__info-overlay">
+                                <img src="{% static 'main/current.PNG' %}" alt="" class="home__info-img">
                             </div>
                         </div>
                     </div>
+                </section>
+    
+                <!--==================== ABOUT ====================-->
+                <section class="about section" id="about">
+                    <div class="about__container container grid">
+                        <div class="about__data">
+                            <h2 class="section__title about__title">More Information <br> About this organization</h2>
+                            <p class="about__description">We make music collaboration possible
+                                from the seat of your homes. We video edit your video recordings and stitch them together using a video editing software. Then it goes public on YouTube! Organization initiated by David Hwang and Teresa Lopez
+                            </p>
+                            <a href="https://www.youtube.com/channel/UCmCicEtvSlBDYxyIB6-xr7w" class="button">YouTube</a>
+                        </div>
+    
+                        <div class="about__img">
+                            <div class="about__img-overlay">
+                                <img src="{% static 'main/first.PNG' %}" alt="" class="about__img-one">
+                            </div>
+    
+                            <div class="about__img-overlay">
+                                <img src="{% static 'main/second.PNG' %}" alt="" class="about__img-two">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!--==================== DISCOVER ====================-->
+                <section class="discover section" id="discover">
+                    <h2 class="section__title">Our past projects <br> click to watch</h2>
+                    
+                    <div class="discover__container container swiper-container">
+                        <div class="swiper-wrapper">
+                            <!--==================== DISCOVER 1 ====================-->
+                            <div class="discover__card swiper-slide">
+                                <a href="https://www.youtube.com/watch?v=A7-JRoghtVE">
+                                <img src="{% static 'main/bandla.PNG' %}" alt="" class="discover__img">
+                                <div class="discover__data">
+                                    <h2 class="discover__title">La La Land</h2>
+                                    <span class="discover__description">Band version arranged by Michael Brown</span>
+                                </div>
+                                </a>
+                            </div>
+    
+                            <!--==================== DISCOVER 2 ====================-->
+                            <div class="discover__card swiper-slide">
+                                <a href="https://www.youtube.com/watch?v=XsVZQGD8rjs">
+                                <img src="{% static 'main/throne.PNG' %}" alt="" class="discover__img"> 
+                                <div class="discover__data">
+                                    <h2 class="discover__title">Game of Thrones</h2>
+                                    <span class="discover__description">High school students</span>
+                                </div>
+                                </a>   
+                            </div>
+    
+                            <!--==================== DISCOVER 3 ====================-->
+                            <div class="discover__card swiper-slide">
+                                <a href="https://www.youtube.com/watch?v=XkOf9E4kJc0">
+                                <img src="{% static 'main/star.PNG' %}" alt="" class="discover__img">
+                                <div class="discover__data">
+                                    <h2 class="discover__title">Star Spangled Banner</h2>
+                                    <span class="discover__description">made in 2020</span>
+                                </div>
+                                </a>
+                            </div>
+    
+                            <!--==================== DISCOVER 4 ====================-->
+                            <div class="discover__card swiper-slide">
+                                <a href="https://www.youtube.com/watch?v=T8hVEXcrLPc">
+                                <img src="{% static 'main/dan.PNG' %}" alt="" class="discover__img">
+                                <div class="discover__data">
+                                    <h2 class="discover__title">Danny Boy </h2>
+                                    <span class="discover__description">string orchestral version</span>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!--==================== EXPERIENCE ====================-->
+                <section class="experience section">
+                    <h2 class="section__title">With Our Experience <br> We Will Serve You</h2>
+    
+                    <div class="experience__container container grid">
+                        <div class="experience__content grid">
+                            <div class="experience__data">
+                                <h2 class="experience__number">2</h2>
+                                <span class="experience__description">Year <br> Experience</span>
+                            </div>
+    
+                            <div class="experience__data">
+                                <h2 class="experience__number">15</h2>
+                                <span class="experience__description">Complete <br> projects</span>
+                            </div>
+    
+                            <div class="experience__data">
+                                <h2 class="experience__number">54</h2>
+                                <span class="experience__description">Total <br> Subscribers</span>
+                            </div>
+                        </div>
+    
+                        <div class="experience__img grid">
+                            <div class="experience__overlay">
+                                <img src="{% static 'main/globe.PNG' %}" alt="" class="experience__img-one">
+                            </div>
+                            
+                            <div class="experience__overlay">
+                                <img src="{% static 'main/globe2.PNG' %}" alt="" class="experience__img-two">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!--==================== VIDEO ====================-->
+                <section class="video section">
+                    <h2 class="section__title">Video Tour</h2>
+    
+                    <div class="video__container container">
+                        <p class="video__description">This is  our very first virtual project.
+                            We made it in 8th grade year at Scullen Middle School
+                        </p>
+    
+                        <div class="video__content">
+                            <video id="video-file">
+                                <source src="{% static 'main/star.mp4' %}" type="video/mp4">
+                            </video>
+    
+                            <button class="button button--flex video__button" id="video-button">
+                                <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+    
+                <!--==================== PLACES ====================-->
+                <section class="place section" id="place">
+                    <h2 class="section__title">Choose Your Place</h2>
+    
+                    <div class="place__container container grid">
+                        <!--==================== PLACES CARD 1 ====================-->
+                        <div class="place__card">
+                            <img src="{% static 'main/simp.PNG' %}" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                </span>
+    
+                                <div class="place__data">
+                                    <h3 class="place__title">Simple Gift</h3>
+                                    <span class="place__subtitle">virtual project</span>
+                                    <span class="place__price">from 2021</span>
+                                </div>
+                            </div>
+    
+                            <a href="https://www.youtube.com/watch?v=yoswnu982-k">
+                                <button class="button button--flex place__button">
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                        </div>
+    
+                        <!--==================== PLACES CARD 2 ====================-->
+                        <div class="place__card">
+                            <img src="{% static 'main/jupiter.PNG' %}" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number"></span>
+                                </span>
+    
+                                <div class="place__data">
+                                    <h3 class="place__title">Jupiter</h3>
+                                    <span class="place__subtitle">Planet</span>
+                                    <span class="place__price">3 people</span>
+                                </div>
+                            </div>
+    
+                            <a href="https://www.youtube.com/watch?v=jjY33-zJM6M">
+                                <button class="button button--flex place__button">
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </a>
+                        </div>
+    
+                        <!--==================== PLACES CARD 3 ====================-->
+                        <div class="place__card">
+                            <img src="{% static 'main/viv.PNG' %}" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number"></span>
+                                </span>
+    
+                                <div class="place__data">
+                                    <h3 class="place__title">Viva La Vida</h3>
+                                    <span class="place__subtitle">Scullen Swinging String</span>
+                                    <span class="place__price">2021</span>
+                                </div>
+                            </div>
+    
+                            <a href="https://www.youtube.com/watch?v=o8Fwq3AhL2E">
+                                <button class="button button--flex place__button">
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </a>
+                        </div>
+    
+                        <!--==================== PLACES CARD 4 ====================-->
+                        <div class="place__card">
+                            <img src="assets/img/place4.jpg" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                </span>
+    
+                                <div class="place__data">
+                                    <h3 class="place__title">Whitehaven</h3>
+                                    <span class="place__subtitle">Australia</span>
+                                    <span class="place__price">$2499</span>
+                                </div>
+                            </div>
+    
+                            <a href="https://www.youtube.com/watch?v=jjY33-zJM6M">
+                                <button class="button button--flex place__button">
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </a>
+                        </div>
+    
+                        <!--==================== PLACES CARD 5 ====================-->
+                        <div class="place__card">
+                            <img src="{% static 'main/jone.PNG' %}" alt="" class="place__img">
+                            
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon"></i>
+                                    <span class="place__rating-number">4,8</span>
+                                </span>
+    
+                                <div class="place__data">
+                                    <h3 class="place__title">Raiders of the Lost Arc</h3>
+                                    <span class="place__subtitle">Virtual Project</span>
+                                    <span class="place__price">Watch</span>
+                                </div>
+                            </div>
+    
+                            <a href="https://www.youtube.com/watch?v=OzswNGc7lYs">
+                                <button class="button button--flex place__button">
+                                    <i class="ri-arrow-right-line"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+    
+                <!--==================== SUBSCRIBE ====================-->
+                <section class="subscribe section">
+                    <div class="subscribe__bg">
+                        <div class="subscribe__container container">
+                            <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
+                            <p class="subscribe__description">Subscribe to our newsletter and get a 
+                                notified with new project releases!
+                            </p>
+        
+                            <form action="https://gmail.us14.list-manage.com/subscribe/post?u=d6369d948bd52a710fc7ff798&amp;id=b79d062ee7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe__form">
+                                <input type="text" placeholder="Enter email" class="subscribe__input">
+        
+                                <button class="button">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                
+                <!--==================== SPONSORS ====================-->
+                <section class="sponsor section">
+                    <div class="sponsor__container container grid">
+                        <div class="sponsor__content">
+                            <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">
+                        </div>
+                        <div class="sponsor__content">
+                            <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">
+                        </div>
+                        <div class="sponsor__content">
+                            <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">
+                        </div>
+                        <div class="sponsor__content">
+                            <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">
+                        </div>
+                        <div class="sponsor__content">
+                            <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">
+                        </div>
+                    </div>
+                </section>
+            </main>
+    
+            <!--==================== FOOTER ====================-->
+            <footer class="footer section">
+                <div class="footer__container container grid">
+                    <div class="footer__content grid">
+                        <div class="footer__data">
+                            <h3 class="footer__title">Travel</h3>
+                            <p class="footer__description">Travel you choose the <br> destination, 
+                                we offer you the <br> experience.
+                            </p>
+                            <div>
+                                <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                    <i class="ri-facebook-box-fill"></i>
+                                </a>
+                                <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                                <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                    <i class="ri-youtube-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">About</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">About Us</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Features</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">New & Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">Company</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Team</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Plan y Pricing</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Become a member</a>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">Support</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">FAQs</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Support Center</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="footer__rights">
+                        <p class="footer__copy">&#169; created by David Hwang</p>
+                        <div class="footer__terms">
+                            <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                            <a href="#" class="footer__terms-link">Privacy Policy</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="formBx">
-                    <form>
-                        <h3>Message Us</h3>
-                        <input type="text" name="" placeholder="Full Name">
-                        <input type="email" name="" placeholder="Email">
-                        <textarea placeholder="Your Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
-                </div>
-        </section>
-
-        <div class="copyright">
-            <p> Hello! Thanks for visiting this website!</p>
-        </div>
-        <script type="text/javascript">
-            window.addEventListener('scroll', function(){
-                var header = document.querySelector('header');
-                header.classList.toggle('sticky', window.scrollY > 0);
-            });
-
-            function toggleMenu(){
-                var menuToggle = document.querySelector('.toggle');
-                var menu = document.querySelector('.menu');
-                menuToggle.classList.toggle('active');
-                menu.classList.toggle('active');
-            }
-        </script>
-    </body>
-</html>
+            </footer>
+    
+             <!--========== SCROLL UP ==========-->
+            <a href="#" class="scrollup" id="scroll-up">
+                <i class="ri-arrow-up-line scrollup__icon"></i>
+            </a>
+    
+            <!--=============== SCROLL REVEAL===============-->
+            <script src="{% static 'main/scroll.js' %}"></script>
+            
+            <!--=============== SWIPER JS ===============-->
+            <script src="{% static 'main/roll.js' %}"></script>
+    
+            <!--=============== MAIN JS ===============-->
+            <script src="{% static 'main/first.js' %}"></script>
+        </body>
+    </html>
 
 
 

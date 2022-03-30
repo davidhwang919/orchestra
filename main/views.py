@@ -36,3 +36,6 @@ def eine(request):
 
 def recent(request):
     return render(request, 'main/recent.htm')
+
+def past(request):
+    return render(request, 'main/past.htm')
