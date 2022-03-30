@@ -13,7 +13,7 @@ section {
 .banner {
     position: relative;
     min-height:100vh;
-    background: url(wood.jpg);
+    background: url(galaxy.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -145,11 +145,11 @@ img {
     max-width: 100%;
 }
 .services {
-    background: rgb(0, 40, 150);
+    background: rgb(255, 255, 255);
 }
 
 .heading.white {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .services.content {
@@ -161,8 +161,8 @@ img {
 
 .services .content .servicesBx {
     padding: 40px 20px;
-    background: rgb(2, 143, 208);
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     max-width: 340px;
     margin: 20px;
     text-align: center;
@@ -170,11 +170,11 @@ img {
 }
 
 .services .content .servicesBx:hover {
-    background: #16bf11;
+    background: #1179bf;
 }
 
 .services .content .servicesBx img {
-    max-width: 80px;
+    max-width: 280px;
 }
 
 .services .content .servicesBx h2 {
